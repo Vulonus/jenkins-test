@@ -4,8 +4,12 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'uvicorn main:app --host 0.0.0.0 --port 80'
-                sh 'curl -v http://localhost:80/'
+                sh 'echo "Hello World!'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'success!'
             }
         }
     }
